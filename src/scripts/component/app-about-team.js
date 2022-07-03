@@ -44,26 +44,26 @@ class AppAboutTeam extends HTMLElement {
             .card-img1{
               width: 100%;
               height: 12rem;
-              background-image: url('naruto.jpg');
+              background-image: url('public/profil/Alifyuan.png');
               background-size: cover;
               background-position: center center;
-              border-radius: 50%;
+              
             }
             .card-img2{
               width: 100%;
               height: 12rem;
-              background-image: url('jo.jpeg');
+              background-image: url('public/profil/pic2.png');
               background-size: cover;
               background-position: center center;
-              border-radius: 50%;
+              
             }
             .card-img3{
               width: 100%;
               height: 12rem;
-              background-image: url('luffy.jpg');
+              background-image: url('public/profil/Ikhsan.png');
               background-size: cover;
               background-position: center center;
-              border-radius: 50%;
+              
             }
             .card-img4{
               width: 100%;
@@ -71,7 +71,7 @@ class AppAboutTeam extends HTMLElement {
               background-image: url('ichigoo.jpg');
               background-size: cover;
               background-position: center center;
-              border-radius: 50%;
+              
             }
           </style>
 
@@ -84,7 +84,7 @@ class AppAboutTeam extends HTMLElement {
               <div class="card-body">
                 <h3> Alifyan Zulfa</h3>
                 <span>Web developer</span>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                <p>Sekolah Tinggi Teknik Pati</p>
               </div>
               </div>
           
@@ -94,7 +94,7 @@ class AppAboutTeam extends HTMLElement {
               <card class="card-body">
                 <h3>Johannes Aritonang</h3>
                 <span>Web developer</span>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                <p>Universitas Mikroskil</p>
               </card>
             </div>
           
@@ -103,7 +103,7 @@ class AppAboutTeam extends HTMLElement {
               <card class="card-body">
                 <h3> Muhamad Iksan</h3>
                 <span>Web developer</span>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                <p>Universitas Muhammadiyah Cirebon</p>
               </card>
             </div>
           
@@ -112,7 +112,8 @@ class AppAboutTeam extends HTMLElement {
               <card class="card-body">
                 <h3>Syukri R</h3>
                 <span>Web developer</span>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                <p>Mahasiswa Kehutanan semester 6 di Universitas Riau
+                </p>
               </card>
             </div>      
           </section>

@@ -32,7 +32,7 @@ const createDetailTemplate = (komik) => `
           <p class="lead">${komik.genre}</p>
     </div>
     <button class="show">Baca Komik</button>
-    <img src="https://cdn.statically.io/img/bacakomik/n6n5wq30f3ggfpam.ttgambar.xyz/data/772241/1052/8e03e471a81edc77c66d942f1969b7e1/BAJXlPWqS8lPrDBtkc9KCeNhKcDMjhvBnYFTAL2N.jpg" class="komik">
+    <embed src="public/pdf-komik/${komik.nama}.pdf" width="800px" height="900px" class="komik" />
   </div>
 `;
 

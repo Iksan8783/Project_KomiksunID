@@ -58,13 +58,14 @@ Item / Card
 }
 
 .item-header-rating {
-    position: absolute;
-    padding: 8px;
-    top: 20px;
-    right: 0;
-    display: inline-block;
-    background-color: #00000070;
+    top: 8px;
+	left: 16px;
     color: white;
+    font-weight: 500;
+	position: absolute;
+    border-radius: 5px;
+	padding: 6px 12px 6px;
+    background-color: #000000;
 }
 
 .rating-score {
@@ -76,13 +77,15 @@ Item / Card
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
 
 .card-title {
-    text-decoration: none;
-    color: #39cc14;
+	min-height: 44px;
+	display: inline-block;
+	text-decoration: none;
+	color: #39cc14;
 }
 
 .card-body {
@@ -119,3 +122,28 @@ Fav Button
 .fav:hover {
     background-color: #39cc14;
 }
+
+/* item genre */
+
+.list-item {
+    background-color: #c8e4c3;
+    padding: 6px;
+    display: grid;
+    gap: 10px;
+    margin: 15px;
+    border-radius: 3px;
+  }
+
+  .list-item a {
+    color: #fff;
+    text-decoration: none;
+    line-height: 35px;
+    font-weight: bold;
+  }
+
+  .list-item a div {
+    font-family: arial;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: #39CC14;
+  }

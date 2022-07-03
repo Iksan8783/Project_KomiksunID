@@ -1,95 +1,132 @@
 class AppPublis extends HTMLElement {
-    connectedCallback() {
-      this._render();
-    }
-  
-    _render() {
-      this.innerHTML = `
+  connectedCallback() {
+    this._render();
+  }
+
+  _render() {
+    this.innerHTML = `
             <style>
-            .input_section {
-                background-color: rgb(200, 228, 195);
-                display: flex;
-                flex-direction: column;
-                padding: 16px;
-                border: 1px solid black;
-                border-radius: 10px;
+            body {
+                font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+                background-color: #fff;
+                color: #000; 
             }
             
-            .input_section > h2 {
-                text-align: center;
-                color: cornflowerblue;
+            * {box-sizing: border-box;}
+            
+            .container {
+                border-radius: 50px;
+                /* background-color: #f2f2f2; */
+                padding: 85px;
             }
             
-            .input_section > form > .input {
-                margin: 8px 0;
+            h2 {
+                font-family: "Poppins", sans-serif;
+                font-size: 2.5rem;
+                font-weight: 700;
             }
             
-            .input_section > form > button {
-                background-color: cornflowerblue;
-                color: white;
-                border: 0;
-                border-radius: 5px;
-                display: block;
-                width: 100%;
-                padding: 8px;
-                cursor: pointer;
-            }
-            
-            .input_section > form > button > span {
+            label {
                 font-weight: bold;
             }
             
-            .input_section > form > .input > input {
-                display: block;
-                width: 100%;
-                padding: 8px;
-                border-radius: 5px;
+            input[type=email], input[type=text], input[type=file], input[type=datetime-local], select, textarea {
+              width: 100%;
+              padding: 12px;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              box-sizing: border-box;
+              margin-top: 6px;
+              margin-bottom: 16px;
+              resize: vertical;
             }
             
-            
-            
-            .input_section > form > .input > label {
-                color: cornflowerblue;
-                font-weight: bold;
+            input[type=email], input[type=text], #sinopsis_cerita {
+                border: none;
+                border-bottom: 1px solid #d9d9d9;
+                padding-left: 0;
+                padding-right: 0;
+                border-radius: 0; 
             }
             
-            .input_section > form > .input_inline {
-                margin: 12px 0;
-                display: flex;
-                align-items: center;
+            input[type=email]:active, input[type=text]:active, #sinopsis_cerita:active, input[type=email]:focus, input[type=text]:focus, #sinopsis_cerita:focus {
+                outline: none;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+                border-color: #000; 
             }
             
-            .input_section > form > .input_inline > label {
-                color: cornflowerblue;
-                font-weight: bold;
-                margin-right: 10px;
+            input[type=submit] {
+              background-color: #000;
+              color: white;
+              padding: 12px 20px;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+              width: 100%;
+              width: 100%;
+              font-weight: bold;
+              font-size: 16px;
             }
+            
+            input[type=submit]:hover {
+              background-color: #45a049;
+            }
+            
             </style>
     
-            <section class="input_section">
-            <h2>Masukkan Buku Baru</h2>
-            <form id="inputBook">
-                <div class="input">
-                    <label for="inputBookTitle">Judul</label>
-                    <input id="inputBookTitle" type="text" required>
-                </div>
-                <div class="input">
-                    <label for="inputBookAuthor">Penulis</label>
-                    <input id="inputBookAuthor" type="text" required>
-                </div>
-                <div class="input">
-                    <label for="inputBookYear">Tahun</label>
-                    <input id="inputBookYear" type="number" required>
-                </div>
-                <div class="input_inline">
-                    <label for="inputBookIsComplete">Selesai dibaca</label>
-                    <input id="inputBookIsComplete" type="checkbox">
-                </div>
-                <button id="bookSubmit" type="submit">Masukkan Buku ke rak <span>Belum selesai dibaca</span></button>
-            </form>
-        </section>
+            <body>
+            <div class="container">
+    
+                <h2 class="judul_utama">Terbitkan Komikmu, <br> Sekarang!</h2>
+    
+                <form method="post" class="submit_komik">
+                  <label for="nama_email">E-Mail</label>
+                  <input type="email" class="nama_email" name="namaEmail" placeholder="E-Mail kamu..." required>
+    
+                  <label for="nama_komik">Nama Komik</label>
+                  <input type="text" class="nama_komik" name="namaKomik" placeholder="Nama komik kamu..." required>
+    
+                  <label for="fileSampul">Sampul Komik</label>
+                  <input type="file" class="file_sampul" name="sampulKomik" value="sampulKomik" required>
+              
+                  <label for="nama_pengarang">Nama Pengarang</label>
+                  <input type="text" class="nama_pengarang" name="namaPengarang" placeholder="Nama kamu..." required>
+              
+                  <label for="Kategori">Kategori</label>
+                  <select class="kategori" name="Kategori" required>
+                    <option value="action">Action</option>
+                    <option value="adventure">Adventure</option>
+                    <option value="comedy">Comedy</option>
+                    <option value="drama">Drama</option>
+                    <option value="fantasy">Fantasy</option>
+                    <option value="isekai">Isekai</option>
+                    <option value="magic">Magic</option>
+                    <option value="mystery">Mystery</option>
+                    <option value="romance">Romance</option>
+                    <option value="sports">Sports</option>
+                    <option value="thriller">Thriller</option>
+                  </select>
+                  
+                  <label for="tanggal_rilis">Tanggal Rilis</label>
+                  <input type="datetime-local" class="tanggal_rilis" name="tanggalRilis" placeholder="Tanggal rilis komik kamu..." required>
+    
+                  <label for="sinopsis_cerita">Sinopsis</label>
+                  <textarea class="sinopsis_cerita" name="sinopsisCerita" placeholder="Tulis sinopsis disini..." style="height:200px" required></textarea>
+    
+                  <label for="unggah_komik">Unggah Komik</label>
+                  <input type="file" class="unggah_komik" name="unggahKomik" required>
+                  
+                  <!-- <button type="submit">Kirim!</button> -->
+                  <input type="submit" value="Kirim!">
+                </form>
+            </div>
+    
+            <script src="https://smtpjs.com/v3/smtp.js">
+            </script>
+        </body>
           `;
-    }
   }
-  
-  customElements.define('app-publis', AppPublis);
+}
+
+customElements.define('app-publis', AppPublis);
