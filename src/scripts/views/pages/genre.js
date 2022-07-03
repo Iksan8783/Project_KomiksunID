@@ -14,14 +14,14 @@ const Genrey = {
   },
 
   afterRender() {
-    function filterByID(item) {
+    function filterByGenre(item) {
       const url = UrlParser.parseActiveUrlWithoutCombiner();
       if (item.genre === url.id) {
         return true;
       }
     }
 
-    const arrByGenre = data.komiks.filter(filterByID);
+    const arrByGenre = data.komiks.filter(filterByGenre);
 
     const komikContainer = document.querySelector('#items');
     arrByGenre.forEach((item) => {

@@ -52,7 +52,7 @@ class AppAboutTeam extends HTMLElement {
             .card-img2{
               width: 100%;
               height: 12rem;
-              background-image: url('public/profil/pic2.png');
+              background-image: url('public/profil/jonathan.png');
               background-size: cover;
               background-position: center center;
               
@@ -68,7 +68,7 @@ class AppAboutTeam extends HTMLElement {
             .card-img4{
               width: 100%;
               height: 12rem;
-              background-image: url('ichigoo.jpg');
+              background-image: url('public/profil/syukri.jpeg');
               background-size: cover;
               background-position: center center;
               
